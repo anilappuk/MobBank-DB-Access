@@ -3,7 +3,7 @@ pipeline {
 		label "master"
 	}
 	environment {
-	  CDD_API_KEY = credentials('CDD_APIKEY')
+	  CDD_API_KEY = credentials('CDD_API_KEY')
 	  CDD_APPLICATION_NAME = "${env.GIT_URL}"
 	  CDD_APPLICATION_VERSION_NAME = "${env.GIT_BRANCH}"
 	  CDD_GIT_COMMIT_ID = "${env.GIT_COMMIT}"
