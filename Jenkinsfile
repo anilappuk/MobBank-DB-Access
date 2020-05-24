@@ -18,23 +18,23 @@ pipeline {
   BRANCH_NAME = "${env.BRANCH_NAME}"
   GIT_LOCAL_BRANCH = "${env.GIT_LOCAL_BRANCH}"
  }	
-    stages {
-        stage("Export Porject") {
-            steps {
-             echo '**** mvn Build****'
-			}
-        }
-        stage("Zip Project") {
-            steps {
-                echo '**** mvn Build****'    
-            }
-        }
-	  stage("Stage Name") {
+stages {
+  stage("Export Porject") {
+    steps {
+      echo '**** mvn Build****'
+     }
+  }
+  stage("Zip Project") {
+    steps {
+      echo '**** mvn Build****'    
+    }
+   }
+  stage("S5") {
    steps {
     echo '**** Build ****'
    }
   }
- }
+}
  post {
   success {
    echo '----------Sending Build Notification to CDD--------------'
@@ -60,6 +60,5 @@ pipeline {
     echo '----------CloudBees Jenkins Pipeline completed successfully--------------'
   }
  }
-}
 
         
