@@ -1,8 +1,7 @@
 pipeline {
-    
-    agent {
+  agent {
         label "master"
-	}
+ }
  }
  environment {
   CDD_API_KEY = credentials('CDD_API_KEY')
@@ -60,5 +59,3 @@ stages {
     echo '----------CloudBees Jenkins Pipeline completed successfully--------------'
   }
  }
-
-        
